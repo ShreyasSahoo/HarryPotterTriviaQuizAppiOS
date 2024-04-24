@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var moveBackgroundImage = false
     @State private var animateViewsIn = false
     @State private var showInfoView = false
+    @State private var playGame = false
     @State private var audioPlayer : AVAudioPlayer!
     var body: some View {
         
@@ -91,6 +92,7 @@ struct ContentView: View {
                         VStack{
                             if animateViewsIn {
                                 Button{
+                                    playGame.toggle()
                                 } label: {
                                     Text("Play")
                                         .font(.title)
@@ -101,6 +103,9 @@ struct ContentView: View {
                                         .clipShape(.rect(cornerRadius: 7))
                                         .shadow(radius: 5)
                                 }
+                                .fullScreenCover(isPresented: $playGame, content: {
+                                    GameplayView()
+                                })
                                 .transition(.offset(y:geo.size.height/3))
                                 .scaleEffect(scalePlayButton ? 1.2 : 1)
                                 .onAppear{
