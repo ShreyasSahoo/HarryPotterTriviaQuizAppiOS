@@ -8,10 +8,12 @@
 import SwiftUI
 import AVKit
 struct ContentView: View {
+    @EnvironmentObject private var store: Store
     @State private var scalePlayButton = false
     @State private var moveBackgroundImage = false
     @State private var animateViewsIn = false
     @State private var showInfoView = false
+    @State private var showSettingsView = false
     @State private var playGame = false
     @State private var audioPlayer : AVAudioPlayer!
     var body: some View {
@@ -121,7 +123,7 @@ struct ContentView: View {
                         VStack{
                             if animateViewsIn {
                                 Button{
-                                    
+                                    showSettingsView = true
                                 } label : {
                                     Image(systemName: "gearshape.fill")
                                         .font(.largeTitle)
@@ -129,7 +131,12 @@ struct ContentView: View {
                                         .shadow(radius: 5)
                             }
                                 .transition(.offset(x:geo.size.width/4))
+                                .sheet(isPresented: $showSettingsView){
+                                    SettingsView()
+                                        .environmentObject(store)
+                                }
                             }
+                                
                         }
                         .animation(.linear(duration:1).delay(2),value:animateViewsIn)
                         
@@ -145,18 +152,19 @@ struct ContentView: View {
         .ignoresSafeArea()
         .onAppear{
             animateViewsIn = true
-            playAudio()
+//            playAudio()
         }
     }
    private func playAudio(){
        let sound = Bundle.main.path(forResource: "magic-in-the-air", ofType: "mp3")
        audioPlayer = try! AVAudioPlayer(contentsOf: URL( filePath : sound! ))
        audioPlayer.numberOfLoops = -1
-//       audioPlayer.play()
+       audioPlayer.play()
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(Store())
 //        .preferredColorScheme(.dark)
 }

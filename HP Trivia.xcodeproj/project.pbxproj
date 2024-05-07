@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B119AFDB2BE8999F0081E948 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = B119AFDA2BE8999F0081E948 /* Store.swift */; };
+		B119AFDD2BE94A5D0081E948 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B119AFDC2BE94A5D0081E948 /* Question.swift */; };
 		B14C8A632BD7D4A6006039A9 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C8A622BD7D4A6006039A9 /* InformationView.swift */; };
 		B14C8A652BD7DF67006039A9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C8A642BD7DF67006039A9 /* SettingsView.swift */; };
 		B14C8A672BD7F3D7006039A9 /* GameplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14C8A662BD7F3D7006039A9 /* GameplayView.swift */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B119AFD92BE898790081E948 /* HPConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = HPConfig.storekit; sourceTree = "<group>"; };
+		B119AFDA2BE8999F0081E948 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		B119AFDC2BE94A5D0081E948 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B14C8A622BD7D4A6006039A9 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		B14C8A642BD7DF67006039A9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		B14C8A662BD7F3D7006039A9 /* GameplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayView.swift; sourceTree = "<group>"; };
@@ -83,6 +88,9 @@
 				B14C8A642BD7DF67006039A9 /* SettingsView.swift */,
 				B14C8A662BD7F3D7006039A9 /* GameplayView.swift */,
 				B1E869152BD02F54001BC1B0 /* Constants.swift */,
+				B119AFDC2BE94A5D0081E948 /* Question.swift */,
+				B119AFDA2BE8999F0081E948 /* Store.swift */,
+				B119AFD92BE898790081E948 /* HPConfig.storekit */,
 				B1E869022BD016C6001BC1B0 /* trivia.json */,
 				B1E868F82BD01669001BC1B0 /* Assets.xcassets */,
 				B1E869072BD016CE001BC1B0 /* magic-in-the-air.mp3 */,
@@ -193,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B119AFDB2BE8999F0081E948 /* Store.swift in Sources */,
+				B119AFDD2BE94A5D0081E948 /* Question.swift in Sources */,
 				B14C8A672BD7F3D7006039A9 /* GameplayView.swift in Sources */,
 				B14C8A652BD7DF67006039A9 /* SettingsView.swift in Sources */,
 				B1E868F72BD01667001BC1B0 /* ContentView.swift in Sources */,
